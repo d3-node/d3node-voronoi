@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
+    "build": "node ./example",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/d3-node/d3node-voronoi.git"
   },
   "keywords": [
     "d3",
@@ -15,7 +20,9 @@
   "author": "Brad Oyler",
   "license": "MIT",
   "dependencies": {
-    "d3-node": "1.0.0",
-    "d3node-output": "0.0.1"
+    "d3-node": "1.0.0"
+  },
+  "devDependencies": {
+    "d3node-output": "0.0.2"
   }
 }
