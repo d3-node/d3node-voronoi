@@ -8,7 +8,7 @@ const defaultContainer = `
 
 const defaultStyle = `.polygons {stroke: #000;}`;
 
-function voronoi ({ siteCount = 99 }, selector = '#chart', container = defaultContainer, style = defaultStyle/*, options*/) {
+function voronoi (data, selector = '#chart', container = defaultContainer, style = defaultStyle/*, options*/) {
   var d3n = new D3Node({
     selector,
     container,
@@ -20,18 +20,19 @@ function voronoi ({ siteCount = 99 }, selector = '#chart', container = defaultCo
   // adapted from: http://bl.ocks.org/mbostock/4060366 - Voronoi Tessellation
   ///-- start D3 code
 
-  var width = 960;
-  var height = 500;
-  var colorScheme = d3.scaleOrdinal(d3.schemeCategory20);
+  const width = 960;
+  const height = 500;
+  const siteCount = data.length;
+  const colorScheme = d3.scaleOrdinal(d3.schemeCategory20);
 
-  var svg = d3n.createSVG()
+  const svg = d3n.createSVG()
     .attr('width', width)
     .attr('height', height);
 
-  var sites = d3.range(siteCount)
+  const sites = d3.range(siteCount)
     .map((d) => [Math.random() * width, Math.random() * height]);
 
-  var voronoi = d3.voronoi().extent([[-1, -1], [width + 1, height + 1]]);
+  const voronoi = d3.voronoi().extent([[-1, -1], [width + 1, height + 1]]);
 
   // draw polygons
   svg.append('g')
