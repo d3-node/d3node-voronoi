@@ -1,6 +1,6 @@
 ## Voronoi
 
-Voronoi Tessellation generator in node.js.
+Voronoi Tessellation generator in Node.js
 
 
 ## Install
@@ -21,7 +21,7 @@ Check out the [example](./example) for usage.
 ##### Output the visualization result to a image
 
 ```
-npm run build
+npm start
 ```
 
 ## Output Preview (png):

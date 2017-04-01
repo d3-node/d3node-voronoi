@@ -1,11 +1,10 @@
 {
   "name": "d3node-voronoi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "D3-Node example - Voronoi Tessellation",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "build": "node ./example",
+    "start": "node ./example",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,9 +19,9 @@
   "author": "Brad Oyler",
   "license": "MIT",
   "dependencies": {
-    "d3-node": "1.0.0"
+    "d3-node": "1.0.1"
   },
   "devDependencies": {
-    "d3node-output": "0.0.2"
+    "d3node-output": "0.0.4"
   }
 }
