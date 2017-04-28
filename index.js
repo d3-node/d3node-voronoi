@@ -25,9 +25,7 @@ function voronoi (data, selector = '#chart', container = defaultContainer, svgSt
   const siteCount = data.length;
   const colorScheme = d3.scaleOrdinal(d3.schemeCategory20);
 
-  const svg = d3n.createSVG()
-    .attr('width', width)
-    .attr('height', height);
+  const svg = d3n.createSVG(width, height);
 
   const sites = d3.range(siteCount)
     .map((d) => [Math.random() * width, Math.random() * height]);
