@@ -8,11 +8,11 @@ const defaultContainer = `
 
 const defaultStyle = `.polygons {stroke: #000;}`;
 
-function voronoi (data, selector = '#chart', container = defaultContainer, svgStyles = defaultStyle/*, options*/) {
+function voronoi (data, selector = '#chart', container = defaultContainer, styles = defaultStyle/*, options*/) {
   var d3n = new D3Node({
     selector,
     container,
-    svgStyles
+    styles
   });
 
   const d3 = d3n.d3;
